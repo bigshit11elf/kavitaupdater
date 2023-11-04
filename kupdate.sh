@@ -246,7 +246,7 @@ else
 fi
 
 echo "Extracting the new Kavita release..."
-tar -xzf kavita-linux-x64.tar.gz -C $folder_to_kavita/../Kavita_new --no-same-owner
+tar -xzf $filename -C $folder_to_kavita/../Kavita_new --no-same-owner
 anzahl_dateien=$(find "$folder_to_kavita/../Kavita_new/Kavita" -maxdepth 1 -type f | wc -l)
 if [ "$anzahl_dateien" -eq 0 ]; then
     echo "Extraction failed. This should not be happening ..."
